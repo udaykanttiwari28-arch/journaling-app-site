@@ -56,27 +56,27 @@
     <div class="container">
         <a class="back-link" href="index.html">&larr; Back to Home</a>
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: February 14, 2026</p>
+        <p class="last-updated">Last updated: October 8, 2026</p>
 
         <h2>Overview</h2>
-        <p>My Little Space is a personal journaling and habit tracking app. Your privacy is fundamental to our design. The app stores all data locally on your device and does not collect, transmit, or share any personal information.</p>
+        <p>My Little Space is a personal journaling and habit tracking app. Your privacy is fundamental to our design. The app does not collect or share your personal information. Your data is stored locally on your device, except when you choose to use Apple's optional iCloud backup or speech recognition services as described below.</p>
 
         <h2>Data Storage</h2>
-        <p>All your data is stored exclusively on your device:</p>
+        <p>By default, your data is stored on your device:</p>
         <ul>
             <li><strong>Journal entries</strong> (text, photos, videos, audio) are saved to your device's local storage.</li>
             <li><strong>Habits and completions</strong> are stored in a local database on your device.</li>
-            <li><strong>No data is sent to any server.</strong> There is no cloud backend, analytics service, or third-party data processor.</li>
+            <li>The app has no developer-operated cloud backend, analytics service, or third-party data processor. Data leaves the device only when you choose Apple's iCloud backup or speech recognition services described below.</li>
         </ul>
 
         <h2>Encryption</h2>
-        <p>All stored data is encrypted at the application level using AES-256-GCM encryption via Apple's CryptoKit framework. This means your journal entries, habit titles, photos, videos, and audio recordings are encrypted at rest and unreadable without your device's encryption key.</p>
+        <p>Journal text and titles, habit titles, photos, videos, and audio recordings are encrypted at the application level using AES-256-GCM through Apple's CryptoKit framework. Other local database values, including habit completion records, are protected by iOS data protection.</p>
 
         <h2>iCloud Backup</h2>
         <p>The app offers an optional iCloud Drive backup feature. If you enable it:</p>
         <ul>
-            <li>Your encrypted data is copied to your personal iCloud Drive storage.</li>
-            <li>Data remains encrypted during backup and in iCloud.</li>
+            <li>Your app data, including app-encrypted content and habit completion records, is copied to your personal iCloud Drive storage.</li>
+            <li>The backup is protected by Apple's iCloud security in transit and in storage.</li>
             <li>Only you can access your iCloud Drive backups through your Apple ID.</li>
             <li>This feature is entirely optional and disabled by default.</li>
         </ul>
@@ -85,15 +85,16 @@
         <p>The app uses Apple's LocalAuthentication framework to protect access to your journal. Biometric data (Face ID or Touch ID) is processed entirely by the iOS operating system. The app never accesses, stores, or transmits any biometric data.</p>
 
         <h2>HealthKit</h2>
-        <p>The app can optionally read health data (steps, sleep, workouts) from Apple Health to automatically track health-related habits. If you grant permission:</p>
+        <p>The app can optionally read steps, sleep, water, active calories, and workouts from Apple Health to automatically track health-related habits. If you grant permission:</p>
         <ul>
-            <li>Health data is read from Apple HealthKit and used only to display habit completions within the app.</li>
-            <li>Health data is never stored permanently, exported, or shared with any third party.</li>
-            <li>You can revoke HealthKit access at any time in Settings > Health > My Little Space.</li>
+            <li>Health data is read only for the habit metrics you authorize. My Little Space never writes data to Apple Health.</li>
+            <li>Values used to record habit completions are stored in the local database under iOS data protection and may be included in your optional iCloud backup.</li>
+            <li>Health data is not included in journal PDF exports and is never shared with third parties.</li>
+            <li>You can manage access at any time in the Apple Health app by tapping your profile picture, then Apps and Services &gt; My Little Space.</li>
         </ul>
 
         <h2>Camera, Photos &amp; Microphone</h2>
-        <p>The app requests access to your camera, photo library, and microphone to let you attach media to journal entries and use voice dictation. All captured media is stored locally on your device in encrypted form. No media is uploaded or shared.</p>
+        <p>The app requests access to your camera, photo library, and microphone to let you attach media to journal entries and use voice dictation. Captured media is stored locally with app-level encryption and may be included in your optional iCloud backup. It is not shared with third parties.</p>
 
         <h2>Speech Recognition</h2>
         <p>The app uses Apple's Speech Recognition framework for voice-to-text dictation. When available, on-device recognition is used. Transcribed text stays in the app and is not sent to any external service beyond Apple's standard speech recognition processing.</p>
